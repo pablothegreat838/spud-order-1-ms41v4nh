@@ -1,0 +1,30 @@
+name: Spud-order-1
+version: 1.0-SNAPSHOT
+main: com.example.spudorder1.SpudOrder1
+api-version: 1.12
+commands:
+  order:
+    description: Creates a new order.
+    usage: /order <price>
+    permission: spudorder1.order
+    permission-message: You do not have permission to create orders.
+  orders:
+    description: Opens the orders GUI.
+    usage: /orders
+    permission: spudorder1.vieworders
+    permission-message: You do not have permission to view orders.
+  giveorder:
+    description: Gives an item from an order to a player.
+    usage: /giveorder <row> <slot>
+    permission: spudorder1.giveorder
+    permission-message: You do not have permission to give orders.
+permissions:
+  spudorder1.order:
+    description: Allows players to create orders.
+    default: true
+  spudorder1.vieworders:
+    description: Allows players to view orders.
+    default: true
+  spudorder1.giveorder:
+    description: Allows players to give items from orders.
+    default: op
